@@ -3,13 +3,13 @@ class MyThread extends Thread {
     @Override
     public void run() {
         try {
-            while(!isInterrupted()) {
+            while (!isInterrupted()) {
                 Thread.sleep(2500);
                 System.out.println("Поток " + Thread.currentThread().getName() + ".Всем привет!");
             }
         } catch (InterruptedException err) {
 
-        } finally{
+        } finally {
             System.out.printf("%s завершен\n", getName());
         }
     }
